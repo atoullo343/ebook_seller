@@ -2,7 +2,7 @@ const express = require('express')
 const keys = require('../config/keys')
 const router = express.Router()
 
-const stripe = require('stripe')(keys.stripePublishableKey)
+const stripe = require('stripe')(keys.stripeSecretKey)
 
 
 router.get('/', (req, res) => {
