@@ -1,0 +1,31 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                Web Dasturlash JavaScript
+            </h1><p class="lead">JavaScriptni o'rganing! Frontend va Backend dasturchilik kasbini egallang</p>
+        <form action="/charge" method="POST">
+        <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="{{stripePublishableKey}}"
+        data-emount="2500"
+        data-name="JavaScript book"
+        data-description="All about JavaScript"
+        data-image="/img/brand.jpg"
+        data-locale="auto"
+        >
+        </script>
+        <script>
+            // Hide default stripe button
+            document.getElementsByClassName('stripe-button-el')[0]
+            .style.display = 'none'
+        </script>
+        <button type="submit" class="btn btn-outline-info text-white btn-lg">To'lash $25</button>
+        </form>
+        </div>
+        <div class="col-md-6 p-5">
+            <img src="/img/book.jfif" alt="" class="card">
+        </div>
+    </div>
+</section>
